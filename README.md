@@ -1,5 +1,9 @@
 # blitzDrt
-Tool to correct perspective distortion. Does not correct verticals (column separators, table lines) yet. Uses Blitz++ and ImageMagick++ library.
+Tool to correct perspective distortion
+
+* Does not correct verticals (column separators, table lines) yet.
+* Uses Blitz++ and ImageMagick++ library.
+* "drt" comes from "discrete radon transformation"
 
 Compile with `./doMake`. Compiles to `productiveDrt`.
 
