@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+outname=productiveDrt
+rm -f a.out $outname
+./c2macro.pl blitzDrt.c++ >sourcecode.h
+
+# jb: Kompilation f. Linux/serv7
+g++ -o $outname -O3 -march=native -mtune=native blitzDrt.c++ -Wall -Wextra -lfftw3 -lboost_program_options `pkg-config --cflags --libs Magick++`
+
+# debugging: g++ -g ... -lefence
+
+
+# ir, 05/2010:
+# kompilation auf FreeBSD und Linux, andere Suchpfade!!
+#g++ -O9 -march=nocona blitzDrt.c++ -o $outname \
+#	-I /usr/local/include \
+#	-I /usr/local/include/ImageMagick \
+#	-I /usr/include \
+#	-I /usr/include/ImageMagick \
+#	-L /usr/local/lib \
+#	-lMagick++ \
+#	-lfftw3 \
+#	-lboost_program_options \
+#	-lblitz\
+#	-lMagickCore
+
+# verkleiner:
+strip $outname
+
+#g++ -g -O9 -march=nocona blitzDrt.c++ -lMagick++ -lfftw3 -lboost_program_options -lblitz -lefence
