@@ -12,3 +12,5 @@ Example: `./productiveDrt --if input.png --of output.png --doTrans`
 Help: `./productiveDrt --help`
 
 Tries to detect if text is on page - to prevent deskewing of e. g. architectural plans or hatchings.
+
+*Warning:* output files are *not* suitable for archivial. Metadata could be lost (imagemagick).
