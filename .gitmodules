@@ -1,0 +1,3 @@
+[submodule "repo/blitz"]
+	path = repo/blitz
+	url = https://github.com/blitzpp/blitz
